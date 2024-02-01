@@ -8,37 +8,32 @@
 </head>
 
 <body>
+    <main></main>
     <template>
         <article>
-            <article>
-                <header>
-                    <h2>Figo</h2>
-                </header>
-                <p class="race">
-                    Hund
-                </p>
-                </div>
-                <img src="https://images.app.goo.gl/yi3zfHDQZxF5KSxZA" alt="">
-            </article>
+            <h2>Figo</h2>
+            <p class="race">
+                Hund
+            </p>
+            <img src="https://canem.dk/cache/1/4/0/7/7/3/2/hvalp-fit-2000x2000x80.webp" alt="">
         </article>
     </template>
+    <script>
+        for (let i = 0; i < 5; i++) {
+            const template = document.querySelector('template').content;
 
+            const copy = template.cloneNode(true);
+
+            copy.querySelector('h2').textContent = 'monika';
+            copy.querySelector('.race').textContent = 'Menneske';
+            copy.querySelector('img').src = "https://cdn-dk-re-ud.clio.me/_migrated/cliobuttons/Hvad_er_et_menneske.jpg?_ga=2.56968419.878370474.1706780609-1161572613.1706780609";
+
+            const parent = document.querySelector('main');
+
+            parent.appendChild(copy);
+        }
+    </script>
 </body>
-<script>
-    for (let i = 0; i < 5; i++) {
-        const template = document.querySelector('template').content
 
-        const copy = template.cloneNode(true)
-
-        copy.querySelector('h2').textcontent = 'monika'
-        copy.querySelector('.race').textcontent = 'Menneske'
-        copy.querySelector('img').textcontent = '#'
-
-        const parent = document.querySelector('main')
-
-        parent.appendChild(copy)
-    }
-
-</script>
 
 </html>
