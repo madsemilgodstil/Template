@@ -12,20 +12,33 @@
         <article>
             <article>
                 <header>
-                    <h1>Overskrift</h1>
+                    <h2>Figo</h2>
                 </header>
-                <div class="content">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci illum placeat aspernatur ea,
-                        voluptates explicabo iusto consequuntur tenetur totam voluptas eos, quas impedit excepturi
-                        consectetur harum veniam delectus iure unde.
-                    </p>
+                <p class="race">
+                    Hund
+                </p>
                 </div>
+                <img src="https://images.app.goo.gl/yi3zfHDQZxF5KSxZA" alt="">
             </article>
         </article>
     </template>
 
 </body>
-<script src="script.js"></script>
+<script>
+    for (let i = 0; i < 5; i++) {
+        const template = document.querySelector('template').content
+
+        const copy = template.cloneNode(true)
+
+        copy.querySelector('h2').textcontent = 'monika'
+        copy.querySelector('.race').textcontent = 'Menneske'
+        copy.querySelector('img').textcontent = '#'
+
+        const parent = document.querySelector('main')
+
+        parent.appendChild(copy)
+    }
+
+</script>
 
 </html>
